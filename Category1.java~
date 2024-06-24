@@ -1,0 +1,110 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Category1 extends JFrame implements ActionListener
+{
+  //Category 1 drinks frame
+  JFrame cat1Frame = new JFrame("cat1");
+  
+  JLabel typeDrink = new JLabel("Chose your Type of Drink");
+  
+  JButton Frape1 = new JButton(new ImageIcon("Frape1.jpg"));
+  JButton Frape2 = new JButton(new ImageIcon("Frape2.jpg"));
+  JButton Frape3 = new JButton(new ImageIcon("Frape3.jpg"));
+  JButton Frape4 = new JButton(new ImageIcon("Frape4.jpg"));
+  
+ //Drink1
+  JFrame Drink1 = new JFrame("Drink1");
+  
+  JLabel Drinkf1 = new JLabel(new ImageIcon("Frape1.jpg"));
+  
+  JCheckBoxMenuItem sugar = new JCheckBoxMenuItem("MORE SUGAR");
+  JCheckBoxMenuItem cream = new JCheckBoxMenuItem("MORE CREAM");
+  
+  JButton NextD1 = new JButton("NextD1");
+  
+  public Category1()
+  {
+    //Category1 Frame
+    ImageIcon backgroundImage2 = new ImageIcon(getClass().getResource("Background images.jpg"));
+    JLabel backgroundLabel2 = new JLabel(backgroundImage2);
+    cat1Frame.setContentPane(backgroundLabel2);
+    
+    //frame and font
+    cat1Frame.setSize(600,550);
+    cat1Frame.setVisible(false);
+    cat1Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    //type of drink
+    typeDrink.setFont(new Font("Serif", Font.BOLD, 30));
+    typeDrink.setForeground(Color.WHITE);
+    
+    //Layout
+    //for type of drink
+    setLayout(null);
+    typeDrink.setBounds(50, 150, 500, 400);
+    cat1Frame.add(typeDrink);
+    
+    //for Frape1
+    setLayout(null);
+    Frape1.setBounds(400, 100, 500, 400);
+    cat1Frame.add(Frape1);
+    Frape1.addActionListener(this);
+    
+    //for Frape2
+    setLayout(null);
+    Frape2.setBounds(1150, 100, 500, 400);
+    cat1Frame.add(Frape2);
+    Frape2.addActionListener(this);
+    
+    //for Frape3
+    setLayout(null);
+    Frape3.setBounds(400, 550, 500, 400);
+    cat1Frame.add(Frape3);
+    Frape3.addActionListener(this);
+    
+    //for Frape4
+    setLayout(null);
+    Frape4.setBounds(1150, 550, 500, 400);
+    cat1Frame.add(Frape4);
+    Frape4.addActionListener(this);
+    
+  //Drink1
+    ImageIcon backgroundImage11 = new ImageIcon(getClass().getResource("Background images.jpg"));
+    JLabel backgroundLabel11 = new JLabel(backgroundImage11);
+    Drink1.setContentPane(backgroundLabel11);
+    
+    Drink1.setSize(600,550);
+    Drink1.setVisible(false);
+    Drink1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    //font
+    //sugar
+    sugar.setFont(new Font("Serif", Font.BOLD, 24));
+    
+    //cream
+    cream.setFont(new Font("Serif", Font.BOLD, 24));
+    
+    //Layout
+    //drink1 image
+    setLayout(null);
+    Drinkf1.setBounds(50, 150, 500, 400);
+    Drink1.add(Drinkf1);
+    
+    //sugar
+    setLayout(null);
+    sugar.setBounds(800, 70, 200, 40);
+    Drink1.add(sugar);
+    
+    //cream
+    setLayout(null);
+    cream.setBounds(800, 550, 200, 40);
+    Drink1.add(cream);
+    
+    NextD1.setBounds(900, 800, 200, 40);
+    Drink1.
+      
+    add(NextD1);
+    NextD1.addActionListener(this);
+  }
